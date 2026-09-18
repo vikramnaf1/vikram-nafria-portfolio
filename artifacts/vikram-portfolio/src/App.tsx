@@ -14,6 +14,7 @@ const navItems = [
   { label: 'Work themes', href: '#work' },
   { label: 'Approach', href: '#approach' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Toolkit', href: '#skills' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -63,28 +64,28 @@ const experience = [
     company: 'Arkansas BlueShield BlueCross',
     location: 'Bentonville, AR',
     current: true,
-    body: 'Leads enterprise data initiatives across member, provider, and reference domains. Partners across business, IT, analytics, and governance on trusted definitions, data quality, privacy, and actionable insights.',
+    body: 'Leads member, provider, and reference data initiatives, aligning definitions, quality, privacy, and analytics across teams.',
   },
   {
     dates: 'Mar 2020 — Sep 2021',
     role: 'MDM Lead Data Analyst',
     company: 'TETRASOFT',
     location: 'Little Rock, AR · client: Arkansas BCBS',
-    body: 'Data validation, unit testing, Ab Initio, SQL, data pipelines, and reports across environments.',
+    body: 'Validated data pipelines and reports across environments using SQL, Ab Initio, and unit testing.',
   },
   {
     dates: 'Oct 2014 — Mar 2020',
     role: 'Application Development Specialist / Senior Analyst',
     company: 'Accenture',
     location: 'Hartford, CT · client: Cigna',
-    body: 'Data analytics and visualization, QA leadership, API testing, statistical analysis on rebates data, dashboards, SQL optimization, automated validation, regression testing, and CI/CD support.',
+    body: 'Led analytics and quality work spanning dashboards, rebates data, SQL optimization, API testing, and automated validation.',
   },
   {
     dates: 'Jul 2010 — Oct 2014',
     role: 'Application Development Analyst',
     company: 'Accenture',
     location: 'Chennai, Tamil Nadu · clients: Cigna and Independence Blue Cross; Bank of America',
-    body: 'Requirement analysis, ETL mapping and transformation review, data migration, performance testing, production problem solving, UAT support, Selenium regression automation, and stakeholder reporting.',
+    body: 'Supported data migration, ETL review, performance and regression testing, production issues, and stakeholder reporting.',
   },
 ];
 
@@ -121,7 +122,7 @@ function Home() {
             <span className="flex h-8 w-8 items-center justify-center border border-primary bg-primary font-mono-ui text-[11px] font-medium text-primary-foreground transition-transform group-hover:-rotate-6">VN</span>
             <span className="hidden text-sm font-semibold tracking-[-0.02em] sm:inline">Vikram Nafria</span>
           </a>
-          <nav className="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
+          <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
             {navItems.map((item) => (
               <a key={item.href} href={item.href} className="text-[12px] font-medium text-muted-foreground transition-colors hover:text-foreground" data-testid={`link-nav-${item.label.toLowerCase().replace(' ', '-')}`}>
                 {item.label}
@@ -131,12 +132,12 @@ function Home() {
               Let&apos;s talk <ArrowUpRight size={14} aria-hidden="true" />
             </a>
           </nav>
-          <button type="button" className="inline-flex items-center justify-center p-2 text-foreground md:hidden" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)} data-testid="button-mobile-menu">
+          <button type="button" className="inline-flex items-center justify-center p-2 text-foreground lg:hidden" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen((open) => !open)} data-testid="button-mobile-menu">
             {menuOpen ? <X size={21} /> : <Menu size={21} />}
           </button>
         </div>
         {menuOpen && (
-          <nav className="border-t border-foreground/10 bg-background px-5 py-5 md:hidden" aria-label="Mobile navigation">
+          <nav id="mobile-navigation" className="border-t border-foreground/10 bg-background px-5 py-5 lg:hidden" aria-label="Mobile navigation">
             <div className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <a key={item.href} href={item.href} onClick={closeMenu} className="border-b border-foreground/10 py-3 text-sm font-medium" data-testid={`link-mobile-${item.label.toLowerCase().replace(' ', '-')}`}>
@@ -153,20 +154,20 @@ function Home() {
 
       <main id="main">
         <section id="top" className="page-grid relative border-b border-foreground/10 pt-[72px]" aria-labelledby="hero-title">
-          <div className="mx-auto grid min-h-[680px] max-w-[1240px] grid-cols-1 items-end gap-14 px-5 pb-20 pt-20 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:px-12 lg:pb-24 lg:pt-28">
+          <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-end gap-14 px-5 pb-16 pt-16 sm:px-8 sm:pt-20 lg:min-h-[600px] lg:grid-cols-[1.3fr_0.7fr] lg:px-12 lg:pb-20 lg:pt-24">
             <div>
-              <div className="reveal mb-9 flex items-center gap-3 font-mono-ui text-[11px] uppercase tracking-[0.18em] text-primary">
+              <div className="mb-9 flex items-center gap-3 font-mono-ui text-[11px] uppercase tracking-[0.18em] text-primary">
                 <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
                 Data leader · healthcare
               </div>
-              <h1 id="hero-title" className="reveal reveal-delay-1 max-w-[790px] text-balance font-display text-[clamp(3.7rem,10vw,8.8rem)] leading-[0.88] tracking-[-0.07em] text-primary">
+              <h1 id="hero-title" className="max-w-[790px] text-balance font-display text-[clamp(3.3rem,8.5vw,7.4rem)] leading-[0.92] tracking-[-0.06em] text-primary">
                 Data people can <em className="text-accent not-italic">trust.</em>
               </h1>
-              <div className="reveal reveal-delay-2 mt-10 max-w-[560px] border-l-2 border-accent pl-5 text-[17px] leading-7 text-muted-foreground sm:text-[19px]">
-                <p>Vikram Nafria translates complex healthcare data into trusted, actionable insight—across payer organizations, master data management, governance, quality, analytics, and regulatory compliance.</p>
+              <div className="mt-9 max-w-[540px] border-l-2 border-accent pl-5 text-[17px] leading-7 text-muted-foreground sm:text-[19px]">
+                <p>I help healthcare teams turn complex data into trusted decisions through master data management, quality, governance, and analytics.</p>
               </div>
-              <div className="reveal reveal-delay-3 mt-10 flex flex-wrap items-center gap-5">
-                <a href="#work" className="inline-flex items-center gap-2 bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5" data-testid="link-hero-work">
+              <div className="mt-9 flex flex-wrap items-center gap-5">
+                <a href="#work" className="inline-flex items-center gap-2 bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-foreground" data-testid="link-hero-work">
                   Explore selected work <ArrowDownRight size={16} aria-hidden="true" />
                 </a>
                 <a href="#contact" className="link-underline text-sm font-semibold text-foreground" data-testid="link-hero-contact">Get in touch</a>
@@ -195,7 +196,7 @@ function Home() {
               <h2 id="impact-title" className="max-w-[450px] font-display text-4xl leading-[1.03] tracking-[-0.04em] text-primary sm:text-5xl">The measure of good data work is what it lets people do.</h2>
               <p className="mt-7 max-w-[390px] text-[16px] leading-7 text-muted-foreground">Results reported in my resume reflect a long view: stronger definitions, better validation, and fewer surprises in the systems people rely on.</p>
             </div>
-            <div className="grid grid-cols-2 gap-x-7 gap-y-10 border-t border-foreground/15 pt-7 sm:grid-cols-4 lg:pt-8">
+            <div className="grid grid-cols-2 gap-x-7 gap-y-10 border-t border-foreground/15 pt-7 lg:pt-8">
               {[
                 ['~20%', 'reduction in production data defects'],
                 ['~45%', 'reduction in privacy incidents'],
@@ -214,7 +215,7 @@ function Home() {
         <section id="work" className="border-y border-foreground/10 bg-secondary/45" aria-labelledby="work-title">
           <div className="mx-auto max-w-[1240px] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
             <SectionLabel index="02">Featured work themes</SectionLabel>
-            <div className="mb-14 flex flex-col justify-between gap-7 sm:flex-row sm:items-end">
+            <div className="mb-14 flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
               <h2 id="work-title" className="max-w-[590px] font-display text-4xl leading-[1.03] tracking-[-0.04em] text-primary sm:text-6xl">A closer look at the questions behind the outcomes.</h2>
               <p className="max-w-[240px] text-[15px] leading-6 text-muted-foreground">These are selected themes from my experience, not formal portfolio projects.</p>
             </div>
@@ -311,8 +312,8 @@ function Home() {
               <div>
                 <h2 id="education-title" className="font-display text-4xl leading-[1.03] tracking-[-0.04em] text-primary sm:text-5xl">Always learning the next layer.</h2>
                 <div className="mt-10 border-t border-foreground/15">
-                  <div className="grid grid-cols-[1fr_auto] gap-5 border-b border-foreground/15 py-5"><div><h3 className="font-semibold text-primary">Master of Applied Business Analytics</h3><p className="mt-1 text-[15px] text-muted-foreground">University of Arkansas, Fayetteville</p></div><span className="font-mono-ui text-[10px] text-accent">Aug 2025 — present</span></div>
-                  <div className="grid grid-cols-[1fr_auto] gap-5 border-b border-foreground/15 py-5"><div><h3 className="font-semibold text-primary">Bachelor of Engineering, Production Engineering</h3><p className="mt-1 text-[15px] text-muted-foreground">Anna University · PSG College of Technology, Coimbatore</p></div><span className="font-mono-ui text-[10px] text-accent">May 2006 — May 2010</span></div>
+                  <div className="grid gap-2 border-b border-foreground/15 py-5 sm:grid-cols-[1fr_auto] sm:gap-5"><div><h3 className="font-semibold text-primary">Master of Applied Business Analytics</h3><p className="mt-1 text-[15px] text-muted-foreground">University of Arkansas, Fayetteville</p></div><span className="font-mono-ui text-[10px] text-accent">Aug 2025 — present</span></div>
+                  <div className="grid gap-2 border-b border-foreground/15 py-5 sm:grid-cols-[1fr_auto] sm:gap-5"><div><h3 className="font-semibold text-primary">Bachelor of Engineering, Production Engineering</h3><p className="mt-1 text-[15px] text-muted-foreground">Anna University · PSG College of Technology, Coimbatore</p></div><span className="font-mono-ui text-[10px] text-accent">May 2006 — May 2010</span></div>
                 </div>
               </div>
               <div><h3 className="font-mono-ui text-[10px] uppercase tracking-[0.15em] text-accent">Certifications</h3><ul className="mt-5 grid grid-cols-1 gap-3 text-[15px] text-foreground/75 sm:grid-cols-2">{['ISTQB Foundation', 'US healthcare certification and AHM250', 'Certified Professional, Academy for Healthcare Management', 'SAFe Certified Scrum Master', 'SAFe Certified Advanced Scrum Master', 'HP ALM', 'Accenture Test Designer', 'Accenture Testers'].map((item) => <li key={item} className="flex gap-2 leading-5"><Check size={15} className="mt-0.5 shrink-0 text-accent" aria-hidden="true" />{item}</li>)}</ul></div>
@@ -324,7 +325,7 @@ function Home() {
           <div className="mx-auto max-w-[1240px] px-5 py-28 sm:px-8 lg:px-12 lg:py-36">
             <SectionLabel index="07">Contact</SectionLabel>
             <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.3fr_0.7fr] lg:items-end lg:gap-24">
-              <div><h2 id="contact-title" className="max-w-[720px] font-display text-5xl leading-[0.95] tracking-[-0.06em] text-primary sm:text-7xl">Have a hard data problem?</h2><p className="mt-8 max-w-[480px] text-[16px] leading-7 text-muted-foreground">I am open to conversations with hiring managers, analytics leaders, healthcare technology teams, and thoughtful collaborators.</p><div className="mt-9 flex flex-wrap items-center gap-4"><a href="mailto:vikramnafria26@gmail.com" className="inline-flex items-center gap-2 bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5" data-testid="link-contact-email"><Mail size={16} aria-hidden="true" />Email Vikram <ArrowUpRight size={15} aria-hidden="true" /></a><a href="https://www.linkedin.com/in/vikramnafria/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-primary px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground" data-testid="link-contact-linkedin"><Linkedin size={16} aria-hidden="true" />LinkedIn</a></div></div>
+              <div><h2 id="contact-title" className="max-w-[720px] font-display text-5xl leading-[0.95] tracking-[-0.06em] text-primary sm:text-7xl">Have a hard data problem?</h2><p className="mt-8 max-w-[480px] text-[16px] leading-7 text-muted-foreground">I am open to conversations with hiring managers, analytics leaders, healthcare technology teams, and thoughtful collaborators.</p><div className="mt-9 flex flex-wrap items-center gap-4"><a href="mailto:vikramnafria26@gmail.com" className="inline-flex items-center gap-2 bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-foreground" data-testid="link-contact-email"><Mail size={16} aria-hidden="true" />Email Vikram <ArrowUpRight size={15} aria-hidden="true" /></a><a href="https://www.linkedin.com/in/vikramnafria/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-primary px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground" data-testid="link-contact-linkedin"><Linkedin size={16} aria-hidden="true" />LinkedIn</a></div></div>
               <div className="border-t border-foreground/15 pt-5 text-sm text-muted-foreground"><div className="flex items-center gap-3"><Mail size={16} className="text-accent" aria-hidden="true" /><a href="mailto:vikramnafria26@gmail.com" className="link-underline" data-testid="text-contact-email">vikramnafria26@gmail.com</a></div><div className="mt-4 flex items-center gap-3"><MapPin size={16} className="text-accent" aria-hidden="true" /><span data-testid="text-contact-location">USA</span></div></div>
             </div>
           </div>

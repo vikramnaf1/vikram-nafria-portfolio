@@ -84,6 +84,7 @@
 @layer base {
   * { @apply border-border; }
   html { scroll-behavior: smooth; }
+  section[id] { scroll-margin-top: 72px; }
   body {
     @apply font-sans antialiased bg-background text-foreground;
     margin: 0;
@@ -120,18 +121,6 @@
 }
 .skip-link:focus { transform: translateY(0); }
 
-.reveal {
-  animation: rise-in .7s both cubic-bezier(.2,.8,.2,1);
-}
-.reveal-delay-1 { animation-delay: .08s; }
-.reveal-delay-2 { animation-delay: .16s; }
-.reveal-delay-3 { animation-delay: .24s; }
-@keyframes rise-in {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal, .reveal-delay-1, .reveal-delay-2, .reveal-delay-3 { animation: none; }
 }
