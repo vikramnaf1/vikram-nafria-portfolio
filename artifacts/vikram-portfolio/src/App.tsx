@@ -193,7 +193,7 @@ function Home() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
             <div>
               <h2 id="impact-title" className="max-w-[450px] font-display text-4xl leading-[1.03] tracking-[-0.04em] text-primary sm:text-5xl">The measure of good data work is what it lets people do.</h2>
-              <p className="mt-7 max-w-[390px] text-[15px] leading-7 text-muted-foreground">Results reported in my resume reflect a long view: stronger definitions, better validation, and fewer surprises in the systems people rely on.</p>
+              <p className="mt-7 max-w-[390px] text-[16px] leading-7 text-muted-foreground">Results reported in my resume reflect a long view: stronger definitions, better validation, and fewer surprises in the systems people rely on.</p>
             </div>
             <div className="grid grid-cols-2 gap-x-7 gap-y-10 border-t border-foreground/15 pt-7 sm:grid-cols-4 lg:pt-8">
               {[
@@ -204,7 +204,7 @@ function Home() {
               ].map(([value, label], index) => (
                 <div key={label} data-testid={`metric-impact-${index}`}>
                   <div className="font-display text-4xl tracking-[-0.05em] text-primary sm:text-5xl">{value}</div>
-                  <div className="mt-3 max-w-[130px] text-[12px] leading-5 text-muted-foreground">{label}</div>
+                  <div className="mt-3 max-w-[130px] text-[13px] leading-5 text-muted-foreground">{label}</div>
                 </div>
               ))}
             </div>
@@ -216,7 +216,7 @@ function Home() {
             <SectionLabel index="02">Featured work themes</SectionLabel>
             <div className="mb-14 flex flex-col justify-between gap-7 sm:flex-row sm:items-end">
               <h2 id="work-title" className="max-w-[590px] font-display text-4xl leading-[1.03] tracking-[-0.04em] text-primary sm:text-6xl">A closer look at the questions behind the outcomes.</h2>
-              <p className="max-w-[240px] text-sm leading-6 text-muted-foreground">These are selected themes from my experience, not formal portfolio projects.</p>
+              <p className="max-w-[240px] text-[15px] leading-6 text-muted-foreground">These are selected themes from my experience, not formal portfolio projects.</p>
             </div>
             <div className="border-t border-foreground/20">
               {projects.map((project, index) => {
@@ -237,7 +237,7 @@ function Home() {
                         <span aria-hidden="true" />
                         <div className="max-w-[680px]">
                           <p className="text-[15px] leading-7 text-muted-foreground">{project.description}</p>
-                          <p className="mt-4 border-l border-accent pl-4 text-sm leading-6 text-foreground/75">{project.detail}</p>
+                          <p className="mt-4 border-l border-accent pl-4 text-[15px] leading-6 text-foreground/75">{project.detail}</p>
                         </div>
                         <div className="col-start-2 mt-2 sm:hidden"><span className="font-mono-ui text-[11px] text-accent">{project.outcome}</span> <span className="text-xs text-muted-foreground">{project.outcomeLabel}</span></div>
                       </div>
@@ -254,7 +254,7 @@ function Home() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.25fr] lg:gap-24">
             <div>
               <h2 id="approach-title" className="max-w-[410px] font-display text-4xl leading-[1.03] tracking-[-0.04em] text-primary sm:text-5xl">Curiosity, with a control check.</h2>
-              <p className="mt-7 max-w-[400px] text-[15px] leading-7 text-muted-foreground">I am most useful where a business question meets messy data. The work is analytical, but the outcome is human: a decision made with more context and less guesswork.</p>
+              <p className="mt-7 max-w-[400px] text-[16px] leading-7 text-muted-foreground">I am most useful where a business question meets messy data. The work is analytical, but the outcome is human: a decision made with more context and less guesswork.</p>
             </div>
             <div className="grid gap-0 border-t border-foreground/15">
               {[
@@ -264,7 +264,7 @@ function Home() {
               ].map(([number, title, body]) => (
                 <div key={number} className="grid grid-cols-[44px_1fr] gap-5 border-b border-foreground/15 py-7 sm:grid-cols-[62px_1fr]">
                   <span className="font-mono-ui text-[11px] text-accent">{number}</span>
-                  <div><h3 className="text-lg font-semibold tracking-[-0.02em] text-primary">{title}</h3><p className="mt-2 max-w-[520px] text-sm leading-6 text-muted-foreground">{body}</p></div>
+                  <div><h3 className="text-lg font-semibold tracking-[-0.02em] text-primary">{title}</h3><p className="mt-2 max-w-[520px] text-[15px] leading-6 text-muted-foreground">{body}</p></div>
                 </div>
               ))}
             </div>
@@ -279,14 +279,14 @@ function Home() {
           <div className="mx-auto max-w-[1240px] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
             <div className="flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
               <div><div className="mb-8 flex items-center gap-3 font-mono-ui text-[11px] uppercase tracking-[0.18em] text-primary-foreground/60"><span className="text-accent">04</span><span className="h-px w-8 bg-accent" aria-hidden="true" /><span>Professional context</span></div><h2 id="experience-title" className="font-display text-4xl leading-[1.03] tracking-[-0.04em] sm:text-6xl">The path behind the practice.</h2></div>
-              <p className="max-w-[280px] text-sm leading-6 text-primary-foreground/65">15+ years across healthcare insurance, banking, data, quality, and delivery.</p>
+              <p className="max-w-[280px] text-[15px] leading-6 text-primary-foreground/65">15+ years across healthcare insurance, banking, data, quality, and delivery.</p>
             </div>
             <div className="mt-16 border-t border-primary-foreground/20">
               {experience.map((item, index) => (
                 <div key={`${item.company}-${item.dates}`} className="grid grid-cols-1 gap-4 border-b border-primary-foreground/20 py-7 sm:grid-cols-[150px_1fr] sm:gap-10 lg:grid-cols-[190px_1fr_260px] lg:gap-16" data-testid={`experience-item-${index}`}>
                   <div className="font-mono-ui text-[10px] uppercase leading-5 tracking-[0.12em] text-primary-foreground/55">{item.dates}{item.current && <span className="mt-2 flex items-center gap-2 text-accent"><span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />current</span>}</div>
-                  <div><h3 className="text-lg font-semibold tracking-[-0.02em]">{item.role}</h3><p className="mt-1 text-sm text-accent">{item.company}</p><p className="mt-4 max-w-[580px] text-sm leading-6 text-primary-foreground/68 lg:hidden">{item.body}</p></div>
-                  <div className="hidden text-sm leading-6 text-primary-foreground/68 lg:block"><p>{item.body}</p><p className="mt-3 flex items-center gap-2 font-mono-ui text-[10px] uppercase tracking-[0.1em] text-primary-foreground/50"><MapPin size={12} aria-hidden="true" />{item.location}</p></div>
+                  <div><h3 className="text-lg font-semibold tracking-[-0.02em]">{item.role}</h3><p className="mt-1 text-[15px] text-accent">{item.company}</p><p className="mt-4 max-w-[580px] text-[15px] leading-6 text-primary-foreground/68 lg:hidden">{item.body}</p></div>
+                  <div className="hidden text-[15px] leading-6 text-primary-foreground/68 lg:block"><p>{item.body}</p><p className="mt-3 flex items-center gap-2 font-mono-ui text-[10px] uppercase tracking-[0.1em] text-primary-foreground/50"><MapPin size={12} aria-hidden="true" />{item.location}</p></div>
                   <div className="font-mono-ui text-[10px] uppercase tracking-[0.1em] text-primary-foreground/50 lg:hidden"><MapPin size={12} className="mr-2 inline" aria-hidden="true" />{item.location}</div>
                 </div>
               ))}
@@ -299,7 +299,7 @@ function Home() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <div><h2 id="skills-title" className="font-display text-4xl leading-[1.03] tracking-[-0.04em] text-primary sm:text-5xl">A toolkit for the spaces between teams.</h2><p className="mt-7 max-w-[390px] text-[15px] leading-7 text-muted-foreground">Tools matter. So does knowing when the real problem is a definition, a handoff, or a missing conversation.</p></div>
             <div className="border-t border-foreground/15">
-              {skillGroups.map((group) => <div key={group.label} className="grid grid-cols-1 gap-2 border-b border-foreground/15 py-5 sm:grid-cols-[190px_1fr] sm:gap-8"><span className="font-mono-ui text-[10px] uppercase tracking-[0.12em] text-accent">{group.label}</span><span className="text-sm leading-6 text-foreground/75">{group.values}</span></div>)}
+              {skillGroups.map((group) => <div key={group.label} className="grid grid-cols-1 gap-2 border-b border-foreground/15 py-5 sm:grid-cols-[190px_1fr] sm:gap-8"><span className="font-mono-ui text-[10px] uppercase tracking-[0.12em] text-accent">{group.label}</span><span className="text-[15px] leading-6 text-foreground/75">{group.values}</span></div>)}
             </div>
           </div>
         </section>
@@ -311,11 +311,11 @@ function Home() {
               <div>
                 <h2 id="education-title" className="font-display text-4xl leading-[1.03] tracking-[-0.04em] text-primary sm:text-5xl">Always learning the next layer.</h2>
                 <div className="mt-10 border-t border-foreground/15">
-                  <div className="grid grid-cols-[1fr_auto] gap-5 border-b border-foreground/15 py-5"><div><h3 className="font-semibold text-primary">Master of Applied Business Analytics</h3><p className="mt-1 text-sm text-muted-foreground">University of Arkansas, Fayetteville</p></div><span className="font-mono-ui text-[10px] text-accent">Aug 2025 — present</span></div>
-                  <div className="grid grid-cols-[1fr_auto] gap-5 border-b border-foreground/15 py-5"><div><h3 className="font-semibold text-primary">Bachelor of Engineering, Production Engineering</h3><p className="mt-1 text-sm text-muted-foreground">Anna University · PSG College of Technology, Coimbatore</p></div><span className="font-mono-ui text-[10px] text-accent">May 2006 — May 2010</span></div>
+                  <div className="grid grid-cols-[1fr_auto] gap-5 border-b border-foreground/15 py-5"><div><h3 className="font-semibold text-primary">Master of Applied Business Analytics</h3><p className="mt-1 text-[15px] text-muted-foreground">University of Arkansas, Fayetteville</p></div><span className="font-mono-ui text-[10px] text-accent">Aug 2025 — present</span></div>
+                  <div className="grid grid-cols-[1fr_auto] gap-5 border-b border-foreground/15 py-5"><div><h3 className="font-semibold text-primary">Bachelor of Engineering, Production Engineering</h3><p className="mt-1 text-[15px] text-muted-foreground">Anna University · PSG College of Technology, Coimbatore</p></div><span className="font-mono-ui text-[10px] text-accent">May 2006 — May 2010</span></div>
                 </div>
               </div>
-              <div><h3 className="font-mono-ui text-[10px] uppercase tracking-[0.15em] text-accent">Certifications</h3><ul className="mt-5 grid grid-cols-1 gap-3 text-sm text-foreground/75 sm:grid-cols-2">{['ISTQB Foundation', 'US healthcare certification and AHM250', 'Certified Professional, Academy for Healthcare Management', 'SAFe Certified Scrum Master', 'SAFe Certified Advanced Scrum Master', 'HP ALM', 'Accenture Test Designer', 'Accenture Testers'].map((item) => <li key={item} className="flex gap-2 leading-5"><Check size={15} className="mt-0.5 shrink-0 text-accent" aria-hidden="true" />{item}</li>)}</ul></div>
+              <div><h3 className="font-mono-ui text-[10px] uppercase tracking-[0.15em] text-accent">Certifications</h3><ul className="mt-5 grid grid-cols-1 gap-3 text-[15px] text-foreground/75 sm:grid-cols-2">{['ISTQB Foundation', 'US healthcare certification and AHM250', 'Certified Professional, Academy for Healthcare Management', 'SAFe Certified Scrum Master', 'SAFe Certified Advanced Scrum Master', 'HP ALM', 'Accenture Test Designer', 'Accenture Testers'].map((item) => <li key={item} className="flex gap-2 leading-5"><Check size={15} className="mt-0.5 shrink-0 text-accent" aria-hidden="true" />{item}</li>)}</ul></div>
             </div>
           </div>
         </section>
