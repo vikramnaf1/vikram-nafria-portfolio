@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vikram Nafria | Connect</title>
+  <meta name="description" content="Quick contact card for Vikram Nafria, healthcare data and analytics leader.">
+  <style>
+    :root {
+      --ink: #1f3438;
+      --ink-soft: #52666b;
+      --paper: #edf0ea;
+      --paper-2: #dce3dc;
+      --line: rgba(31, 52, 56, .18);
+      --green: #4f6f7c;
+      --clay: #b77c45;
+      --gold: #d7b075;
+      --white: #fbfaf3;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { min-height: 100%; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background:
+        radial-gradient(circle at 82% 8%, rgba(215,176,117,.28), transparent 24%),
+        radial-gradient(circle at 12% 86%, rgba(120,144,154,.28), transparent 28%),
+        linear-gradient(90deg, rgba(79,111,124,.08) 1px, transparent 1px),
+        linear-gradient(rgba(79,111,124,.08) 1px, transparent 1px),
+        var(--paper);
+      background-size: auto, auto, 52px 52px, 52px 52px, auto;
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    a:focus-visible {
+      outline: 3px solid var(--clay);
+      outline-offset: 4px;
+    }
+
+    main {
+      width: min(100%, 520px);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 28px 18px 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(251, 250, 243, .78);
+      box-shadow: 0 28px 70px rgba(31, 52, 56, .14);
+      padding: 24px;
+    }
+
+    .mark {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      background: var(--green);
+      color: var(--white);
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .eyebrow {
+      margin: 22px 0 10px;
+      color: var(--clay);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--green);
+      font-size: clamp(2.4rem, 13vw, 4.4rem);
+      line-height: .92;
+      letter-spacing: -.055em;
+    }
+
+    .role {
+      margin: 18px 0 0;
+      color: var(--ink);
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .lede {
+      margin: 10px 0 0;
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .proof {
+      margin: 22px 0 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .proof div {
+      min-height: 82px;
+      padding: 13px 10px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .proof strong {
+      display: block;
+      color: var(--green);
+      font-size: 1.55rem;
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .proof span {
+      display: block;
+      margin-top: 7px;
+      color: var(--ink-soft);
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    .links {
+      margin-top: 22px;
+      display: grid;
+      gap: 11px;
+    }
+
+    .link {
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      border: 1px solid var(--line);
+      background: rgba(237, 240, 234, .72);
+      padding: 15px 16px;
+      color: var(--ink);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .link.primary {
+      background: var(--green);
+      color: var(--white);
+      border-color: var(--green);
+    }
+
+    .link span {
+      color: var(--clay);
+      font-family: var(--mono);
+    }
+
+    .link.primary span {
+      color: var(--gold);
+    }
+
+    .footer {
+      margin: 18px 0 0;
+      color: var(--ink-soft);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .08em;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 380px) {
+      main { padding-inline: 14px; }
+      .card { padding: 20px; }
+      .proof { grid-template-columns: 1fr; }
+      .proof div { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card" aria-labelledby="connect-title">
+      <div class="mark">VN</div>
+      <div class="eyebrow">Healthcare data & analytics</div>
+      <h1 id="connect-title">Vikram Nafria</h1>
+      <p class="role">I help healthcare teams turn complex payer data into trusted decisions.</p>
+      <p class="lede">MDM, data quality, governance, analytics, and responsible human-in-the-loop AI review.</p>
+
+      <div class="proof" aria-label="Quick profile highlights">
+        <div><strong>15+</strong><span>years across healthcare data and delivery</span></div>
+        <div><strong>MDM</strong><span>member, provider, and reference domains</span></div>
+        <div><strong>AI</strong><span>responsible review and data stewardship</span></div>
+      </div>
+
+      <nav class="links" aria-label="Quick contact links">
+        <a class="link primary" href="mailto:vikramnafria26@gmail.com">Email Vikram <span>↗</span></a>
+        <a class="link" href="https://www.linkedin.com/in/vikramnafria/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+        <a class="link" href="assets/vikram-nafria-resume.pdf" download>Download Resume <span>↓</span></a>
+        <a class="link" href="index.html">Full Portfolio <span>↗</span></a>
+        <a class="link" href="index.html#lab">Analytics Lab <span>↗</span></a>
+      </nav>
+
+      <p class="footer">Built for career fairs, networking, and NFC sharing.</p>
+    </section>
+  </main>
+</body>
+</html>
