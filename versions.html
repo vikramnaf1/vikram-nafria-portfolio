@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vikram Nafria | Portfolio Version Archive</title>
+  <meta name="description" content="Version archive for Vikram Nafria's healthcare data and analytics portfolio.">
+  <style>
+    :root {
+      --ink: #1f3438;
+      --ink-soft: #52666b;
+      --paper: #edf0ea;
+      --line: #b7c2bc;
+      --green: #4f6f7c;
+      --clay: #b77c45;
+      --white: #fbfaf3;
+      --max: 920px;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, rgba(79,111,124,.08) 1px, transparent 1px),
+        linear-gradient(rgba(79,111,124,.08) 1px, transparent 1px),
+        var(--paper);
+      background-size: 56px 56px;
+      color: var(--ink);
+      font-family: var(--sans);
+    }
+
+    main {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 72px 22px;
+    }
+
+    a { color: inherit; }
+
+    .eyebrow {
+      margin-bottom: 18px;
+      color: var(--clay);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      line-height: .95;
+      letter-spacing: -.04em;
+      color: var(--green);
+    }
+
+    .lede {
+      max-width: 620px;
+      margin: 24px 0 0;
+      color: var(--ink-soft);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .actions {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--green);
+      padding: 12px 16px;
+      color: var(--green);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .version-list {
+      margin-top: 48px;
+      border-top: 1px solid rgba(31,52,56,.22);
+    }
+
+    .section-heading {
+      margin: 48px 0 -24px;
+      color: var(--clay);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .version-link {
+      display: grid;
+      grid-template-columns: 220px 1fr auto;
+      gap: 18px;
+      align-items: center;
+      border-bottom: 1px solid rgba(31,52,56,.18);
+      padding: 18px 0;
+      text-decoration: none;
+    }
+
+    .version-link:hover .name,
+    .version-link:hover .arrow {
+      color: var(--clay);
+    }
+
+    .name {
+      font-weight: 800;
+      color: var(--green);
+    }
+
+    .meta {
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+
+    .arrow {
+      color: var(--clay);
+      font-family: var(--mono);
+    }
+
+    @media (max-width: 700px) {
+      main { padding: 42px 18px; }
+      .version-link {
+        grid-template-columns: 1fr auto;
+      }
+      .meta {
+        grid-column: 1 / -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Portfolio archive</div>
+    <h1>Previous versions and theme explorations.</h1>
+    <p class="lede">This page keeps earlier portfolio drafts accessible while the root homepage remains the current final version.</p>
+    <div class="actions">
+      <a class="button primary" href="index.html">Current final portfolio</a>
+      <a class="button" href="connect.html">Mobile connect page</a>
+      <a class="button" href="assets/vikram-nafria-resume.pdf" download>Download Resume</a>
+    </div>
+
+    <div class="section-heading">Design origins</div>
+    <div class="version-list" aria-label="Original portfolio direction links">
+      <a class="version-link" href="claude/"><span class="name">Claude Origin</span><span class="meta">Early editorial direction and first-pass healthcare data portfolio structure.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="stitch/"><span class="name">Stitch Origin</span><span class="meta">Desktop and mobile generated concepts preserved as an origin reference.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit/"><span class="name">Replit Source</span><span class="meta">Original Replit app workspace and source-based exploration.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/"><span class="name">Replit V1</span><span class="meta">First live static Replit version with the core portfolio structure.</span><span class="arrow">↗</span></a>
+    </div>
+
+    <div class="section-heading">Refinement path</div>
+    <div class="version-list" aria-label="Portfolio version links">
+      <a class="version-link" href="replit-v1/index-theme-architectural-blue-hero.html"><span class="name">Architectural Blue Hero</span><span class="meta">Current working favorite with refined content, motion, and proof section.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index-theme-architectural-blue-hero.backup-20260921-101729.html"><span class="name">Pre-proof Backup</span><span class="meta">Backup made before the Week 3 content-proof edits.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index.html"><span class="name">Replit V1</span><span class="meta">Earlier static version with the core portfolio structure.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index-animated.html"><span class="name">Animated Base</span><span class="meta">Base version with ambient hero motion and animation experiments.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index-theme-architectural-blue.html"><span class="name">Architectural Blue</span><span class="meta">Palette-only architectural blue variant.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index-theme-blue-terrace.html"><span class="name">Blue Terrace</span><span class="meta">Theme inspired by calm exterior/interior architectural blues.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index-theme-cyan-slate.html"><span class="name">Cyan Slate</span><span class="meta">Dark stone and cyan backlight direction.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index-theme-paint-strike.html"><span class="name">Paint Strike</span><span class="meta">Teal and orange paint-inspired direction.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index-theme-crimson-canopy.html"><span class="name">Crimson Canopy</span><span class="meta">Dark crimson botanical theme direction.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index-theme-neon-bulb.html"><span class="name">Neon Bulb</span><span class="meta">Dark neon ember theme direction.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index-theme-crimson-leaf.html"><span class="name">Crimson Leaf</span><span class="meta">Palette-only crimson leaf variant.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index-theme-neon-ember.html"><span class="name">Neon Ember</span><span class="meta">Palette-only neon ember variant.</span><span class="arrow">↗</span></a>
+      <a class="version-link" href="replit-v1/index-theme-teal-orange.html"><span class="name">Teal Orange</span><span class="meta">Palette-only teal and orange variant.</span><span class="arrow">↗</span></a>
+    </div>
+  </main>
+</body>
+</html>
